@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TempConverseApp</string>
+    <string name="Temperature">TextView</string>
+    <string name="temperature">Temperature</string>
+
+    <string-array name="tempUnits">
+        <item>Celsius to Fahrenheit</item>
+        <item>Fahrenheit to Celsius</item>
+        <item>Celsius to Kelvin</item>
+    </string-array>
+</resources>
