@@ -6,4 +6,76 @@
     android:layout_height="match_parent"
     tools:context=".cTof">
 
+    <TextView
+        android:id="@+id/CtoF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/celsius_to_fahrenheit"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#5E35B1"
+        android:textIsSelectable="false"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ctofNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:hint="@string/enter_celsius_here"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CtoF"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/ctofResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ctofNumber"
+        app:layout_constraintVertical_bias="0.68" />
+
+    <TextView
+        android:id="@+id/fah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fahrenheit"
+        android:textColor="#3949AB"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ctofResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ctofNumber"
+        app:layout_constraintVertical_bias="0.792" />
+
+    <ImageButton
+        android:id="@+id/Button1"
+        android:layout_width="74dp"
+        android:layout_height="69dp"
+        android:scrollbarThumbHorizontal="@color/design_default_color_secondary"
+        android:scrollbarThumbVertical="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@+id/fah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ctofNumber"
+        app:srcCompat="@android:drawable/ic_popup_sync"
+        android:contentDescription="@string/todo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

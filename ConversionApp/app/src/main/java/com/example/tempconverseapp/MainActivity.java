@@ -2,8 +2,11 @@ package com.example.tempconverseapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,5 +24,15 @@ public class MainActivity extends AppCompatActivity {
 
         tempUnitAdapter unitAdapter = new tempUnitAdapter(this, tempUnits);
         myList.setAdapter(unitAdapter);
+
+        myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent showCToF = new Intent(getApplicationContext(), cTof.class);
+                showCToF.putExtra("com.example.tempconverseapp.ITEM_INDEX", position);
+                startActivity(showCToF);
+
+            }
+        });
     }
 }

@@ -2,6 +2,11 @@
     <string name="app_name">TempConverseApp</string>
     <string name="Temperature">TextView</string>
     <string name="temperature">Temperature</string>
+    <string name="todo">TODO</string>
+    <string name="result">Result</string>
+    <string name="celsius_to_fahrenheit">CELSIUS TO FAHRENHEIT</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="enter_celsius_here">Enter Celsius Here</string>
 
     <string-array name="tempUnits">
         <item>Celsius to Fahrenheit</item>
