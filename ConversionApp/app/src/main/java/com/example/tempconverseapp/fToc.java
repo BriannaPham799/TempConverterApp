@@ -14,7 +14,7 @@ public class fToc extends AppCompatActivity {
 
     EditText fto_cNumber;
     TextView FtoC, fto_cResult, cel;
-    ImageButton button;
+    ImageButton button1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +28,16 @@ public class fToc extends AppCompatActivity {
         cel = findViewById(R.id.cel);
         fto_cNumber = findViewById(R.id.ftocNumber);
 
-        button = findViewById(R.id.Button2);
+        button1 = findViewById(R.id.Button2);
 
         //Adding button activity
-        button.setOnClickListener(new View.OnClickListener() {
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double fah = Double.parseDouble(fto_cNumber.getText().toString());
-                double celsius = (fah-32) * 5/9;
-                celsius = Double.parseDouble(new DecimalFormat("##.##").format(celsius));
-                fto_cResult.setText("" + celsius);
+                double fahNumber = Double.parseDouble(fto_cNumber.getText().toString());
+                double celNumber = (fahNumber - 32) * 5/9;
+                celNumber = Double.parseDouble(new DecimalFormat("##.##").format(celNumber));
+                fto_cResult.setText("" + celNumber);
             }
         });
 

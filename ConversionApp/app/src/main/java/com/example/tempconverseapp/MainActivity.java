@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,34 +19,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Resources res = getResources();
-        myList = (ListView) findViewById(R.id.myList);
-        tempUnits = res.getStringArray(R.array.tempUnits);
-
-        tempUnitAdapter unitAdapter = new tempUnitAdapter(this, tempUnits);
-        myList.setAdapter(unitAdapter);
-
-        myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        Button fTocButton = (Button) findViewById(R.id.fah_Button);
+        fTocButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String value;
-                value = ((ListView) myList).toString();
-                if(value.equals("Celsius to Fahrenheit"))
-                {
-                    Intent in = new Intent(getApplicationContext(), cTof.class);
-                    startActivity(in);
-                }
-                else if(value.equals("Fahrenheit To Celsius"))
-                {
-                    Intent intent = new Intent(getApplicationContext(), fToc.class);
-                    startActivity(intent);
-                }
-
-
-
+            public void onClick(View v) {
+                Intent in1 = new Intent(getApplicationContext(), fToc.class);
+                startActivity(in1);
             }
         });
-
+        Button cTofButton = (Button) findViewById(R.id.celsius_button);
+        cTofButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), cTof.class);
+                startActivity(in);
+            }
+        });
 
 
     }

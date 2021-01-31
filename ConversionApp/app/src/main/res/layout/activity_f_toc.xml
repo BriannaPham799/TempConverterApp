@@ -6,31 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".fToc">
 
-    <TextView
-        android:id="@+id/FToC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="@string/fahrenheit_to_celsius"
-        android:textAlignment="center"
-        android:textColor="@color/purple_700"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/ftocNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:autofillHints=""
+        android:layout_marginTop="76dp"
+        android:autofillHints="Enter Fahrenheit Here"
         android:ems="10"
-        android:hint="@string/enter_fahreneheit_here"
+        android:hint="@string/enter_fahrenheit_here"
         android:inputType="numberSigned|number|numberDecimal"
-        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,11 +26,10 @@
         android:id="@+id/cel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="64dp"
         android:text="@string/celsius"
-        android:textAlignment="center"
-        android:textColor="#3949AB"
-        android:textSize="40sp"
+        android:textColor="#8E24AA"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -56,23 +41,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="80sp"
+        android:textColor="@color/black"
+        android:textSize="70sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cel"
-        app:layout_constraintVertical_bias="0.262" />
-
-    <ImageButton
-        android:id="@+id/Button2"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="60dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ftocNumber"
-        app:srcCompat="@android:drawable/ic_popup_sync" />
+        app:layout_constraintTop_toBottomOf="@+id/cel"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <ImageButton
+        android:id="@+id/Button2"
+        android:layout_width="81dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="72dp"
+        android:contentDescription="@string/todo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ftocNumber"
+        app:srcCompat="@android:drawable/stat_notify_sync_noanim" />
+
+    <TextView
+        android:id="@+id/FToC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/fahrenheittocelsius"
+        android:textAlignment="center"
+        android:textColor="#3949AB"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

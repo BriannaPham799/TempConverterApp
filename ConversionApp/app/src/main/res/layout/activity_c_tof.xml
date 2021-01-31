@@ -69,13 +69,13 @@
         android:id="@+id/Button1"
         android:layout_width="74dp"
         android:layout_height="69dp"
+        android:contentDescription="@string/todo"
         android:scrollbarThumbHorizontal="@color/design_default_color_secondary"
         android:scrollbarThumbVertical="@color/teal_700"
         app:layout_constraintBottom_toTopOf="@+id/fah"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ctofNumber"
-        app:srcCompat="@android:drawable/ic_popup_sync"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@android:drawable/ic_popup_sync" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
