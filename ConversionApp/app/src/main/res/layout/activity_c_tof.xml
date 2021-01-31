@@ -28,15 +28,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/enter_celsius_here"
-        android:inputType="number"
+        android:inputType="numberSigned|number|numberDecimal"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CtoF"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/CtoF" />
 
     <TextView
         android:id="@+id/ctofResult"

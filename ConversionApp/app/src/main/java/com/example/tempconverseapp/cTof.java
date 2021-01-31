@@ -9,11 +9,14 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class cTof extends AppCompatActivity {
 
     EditText cto_fNumber;
     TextView CtoF, cto_fResult, fah;
     ImageButton button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,17 +35,14 @@ public class cTof extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Doing converting from Celsius to Fahrenheit
-                ConvertCToF();
+                double cel = Double.parseDouble(cto_fNumber.getText().toString());
+                double fahrenheit = (cel * 9)/5 + 32;
+                fahrenheit = Double.parseDouble(new DecimalFormat("##.##").format(fahrenheit));
+                cto_fResult.setText("" + fahrenheit);
             }
         });
 
     }
 
-    private void ConvertCToF() {
-        String celsiusValue = cto_fNumber.getText().toString();
-        double cel = Double.parseDouble(celsiusValue);
-        double fahrenheit = cel*1.8 + 32;
-        cto_fResult.setText("" + fahrenheit);
-    }
+
 }

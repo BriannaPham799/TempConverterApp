@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BFFBC02D"
+    android:background="@drawable/cloud"
     tools:context=".MainActivity">
 
     <ListView
         android:id="@+id/myList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#61FFB300"
         android:cacheColorHint="#CBDD13"
-        android:listSelector="?android:attr/textColorHighlight"
+        android:listSelector="@color/material_on_primary_emphasis_medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
