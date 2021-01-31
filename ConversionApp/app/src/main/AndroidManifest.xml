@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TempConverseApp">
-        <activity android:name=".fToc"></activity>
+        <activity android:name=".fToc" />
         <activity android:name=".cTof" />
         <activity android:name=".MainActivity">
             <intent-filter>

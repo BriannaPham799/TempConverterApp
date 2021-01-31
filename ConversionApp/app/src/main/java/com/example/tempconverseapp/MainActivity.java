@@ -28,11 +28,25 @@ public class MainActivity extends AppCompatActivity {
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent showCToF = new Intent(getApplicationContext(), cTof.class);
-                showCToF.putExtra("com.example.tempconverseapp.ITEM_INDEX", position);
-                startActivity(showCToF);
+                String value;
+                value = ((ListView) myList).toString();
+                if(value.equals("Celsius to Fahrenheit"))
+                {
+                    Intent in = new Intent(getApplicationContext(), cTof.class);
+                    startActivity(in);
+                }
+                else if(value.equals("Fahrenheit To Celsius"))
+                {
+                    Intent intent = new Intent(getApplicationContext(), fToc.class);
+                    startActivity(intent);
+                }
+
+
 
             }
         });
+
+
+
     }
 }
